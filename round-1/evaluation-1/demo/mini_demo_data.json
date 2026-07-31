@@ -1,0 +1,3591 @@
+{
+  "models_evaluated": [
+    "anthropic/claude-haiku-4.5",
+    "openai/gpt-4o-mini"
+  ],
+  "n_problems": 40,
+  "n_checksum_detectable": 20,
+  "n_checksum_invisible": 20,
+  "records": [
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4312.0,
+      "initial_answer": 4312.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4312.0,
+      "initial_answer": 4312.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4312.0,
+      "initial_answer": 4312.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4304.0,
+      "initial_answer": 4304.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4312.0,
+      "initial_answer": 4312.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 8624.0,
+      "initial_answer": 8624.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4304.0,
+      "initial_answer": 4304.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4304.0,
+      "initial_answer": 4304.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4304.0,
+      "initial_answer": 4304.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0004",
+      "gold_answer": 4304.0,
+      "final_answer": 4304.0,
+      "initial_answer": 4304.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0008",
+      "gold_answer": 134.0,
+      "final_answer": 134.0,
+      "initial_answer": 134.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": -2.0,
+      "initial_answer": -2.0,
+      "is_correct": false,
+      "flagged_error": true
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": -2.0,
+      "initial_answer": -2.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": -2.0,
+      "initial_answer": -2.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": 538.0,
+      "initial_answer": 538.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": 538.0,
+      "initial_answer": 538.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": 538.0,
+      "initial_answer": 538.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": 538.0,
+      "initial_answer": 538.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0023",
+      "gold_answer": 538.0,
+      "final_answer": 538.0,
+      "initial_answer": 538.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": null,
+      "initial_answer": null,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0024",
+      "gold_answer": 1038.0,
+      "final_answer": 1038.0,
+      "initial_answer": 1038.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": -3.0,
+      "initial_answer": -3.0,
+      "is_correct": false,
+      "flagged_error": true
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0027",
+      "gold_answer": 588.0,
+      "final_answer": 588.0,
+      "initial_answer": 588.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0036",
+      "gold_answer": 231.0,
+      "final_answer": 231.0,
+      "initial_answer": 231.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 253.5,
+      "initial_answer": 253.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 253.5,
+      "initial_answer": 253.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 253.5,
+      "initial_answer": 253.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 253.5,
+      "initial_answer": 253.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 252.0,
+      "initial_answer": 252.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 252.0,
+      "initial_answer": 252.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 252.0,
+      "initial_answer": 252.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0037",
+      "gold_answer": 252.0,
+      "final_answer": 252.0,
+      "initial_answer": 252.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0038",
+      "gold_answer": 557.0,
+      "final_answer": 557.0,
+      "initial_answer": 557.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0040",
+      "gold_answer": 1307.0,
+      "final_answer": 1307.0,
+      "initial_answer": 1307.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0046",
+      "gold_answer": 726.0,
+      "final_answer": 726.0,
+      "initial_answer": 726.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0048",
+      "gold_answer": 489.0,
+      "final_answer": 489.0,
+      "initial_answer": 489.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0050",
+      "gold_answer": 384.0,
+      "final_answer": 384.0,
+      "initial_answer": 384.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0055",
+      "gold_answer": 291.0,
+      "final_answer": 291.0,
+      "initial_answer": 291.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0062",
+      "gold_answer": 438.0,
+      "final_answer": 438.0,
+      "initial_answer": 438.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 95.0,
+      "initial_answer": 95.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0076",
+      "gold_answer": 50.0,
+      "final_answer": 50.0,
+      "initial_answer": 50.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0077",
+      "gold_answer": 2744.0,
+      "final_answer": 2744.0,
+      "initial_answer": 2744.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.5,
+      "initial_answer": 9.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.5,
+      "initial_answer": 9.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.5,
+      "initial_answer": 9.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.0,
+      "initial_answer": 9.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.0,
+      "initial_answer": 9.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.0,
+      "initial_answer": 9.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.0,
+      "initial_answer": 9.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0082",
+      "gold_answer": 9.0,
+      "final_answer": 9.0,
+      "initial_answer": 9.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 46.0,
+      "initial_answer": 46.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 138.0,
+      "initial_answer": 138.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0083",
+      "gold_answer": 1365.0,
+      "final_answer": 1365.0,
+      "initial_answer": 1365.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.5,
+      "initial_answer": 125.5,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 126.0,
+      "initial_answer": 126.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0087",
+      "gold_answer": 125.0,
+      "final_answer": 125.0,
+      "initial_answer": 125.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0089",
+      "gold_answer": 834.0,
+      "final_answer": 834.0,
+      "initial_answer": 834.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.625,
+      "initial_answer": 159.625,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.625,
+      "initial_answer": 159.625,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.625,
+      "initial_answer": 159.625,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.0,
+      "initial_answer": 159.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.0,
+      "initial_answer": 159.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 445.0,
+      "initial_answer": 445.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.0,
+      "initial_answer": 159.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0098",
+      "gold_answer": 159.0,
+      "final_answer": 159.0,
+      "initial_answer": 159.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 331.0,
+      "initial_answer": 331.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 331.0,
+      "initial_answer": 331.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 331.0,
+      "initial_answer": 331.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 328.0,
+      "initial_answer": 328.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 328.0,
+      "initial_answer": 328.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 328.0,
+      "initial_answer": 328.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 331.0,
+      "initial_answer": 331.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0100",
+      "gold_answer": 328.0,
+      "final_answer": 328.0,
+      "initial_answer": 328.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0113",
+      "gold_answer": 702.0,
+      "final_answer": 702.0,
+      "initial_answer": 702.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 165.0,
+      "initial_answer": 165.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0120",
+      "gold_answer": 27.0,
+      "final_answer": 27.0,
+      "initial_answer": 27.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 158.25,
+      "initial_answer": 158.25,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 158.25,
+      "initial_answer": 158.25,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 158.25,
+      "initial_answer": 158.25,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 156.0,
+      "initial_answer": 156.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 156.0,
+      "initial_answer": 156.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 156.0,
+      "initial_answer": 156.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 156.0,
+      "initial_answer": 156.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0121",
+      "gold_answer": 156.0,
+      "final_answer": 156.0,
+      "initial_answer": 156.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.8,
+      "initial_answer": 41.8,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 45.0,
+      "initial_answer": 45.0,
+      "is_correct": false,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0128",
+      "gold_answer": 41.0,
+      "final_answer": 41.0,
+      "initial_answer": 41.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0135",
+      "gold_answer": 2240.0,
+      "final_answer": 2240.0,
+      "initial_answer": 2240.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0144",
+      "gold_answer": 533.0,
+      "final_answer": 533.0,
+      "initial_answer": 533.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0148",
+      "gold_answer": 8.0,
+      "final_answer": 8.0,
+      "initial_answer": 8.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0149",
+      "gold_answer": 608.0,
+      "final_answer": 608.0,
+      "initial_answer": 608.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0150",
+      "gold_answer": 443.0,
+      "final_answer": 443.0,
+      "initial_answer": 443.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0155",
+      "gold_answer": 374.0,
+      "final_answer": 374.0,
+      "initial_answer": 374.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0162",
+      "gold_answer": 1378.0,
+      "final_answer": 1378.0,
+      "initial_answer": 1378.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0165",
+      "gold_answer": 160.0,
+      "final_answer": 160.0,
+      "initial_answer": 160.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0168",
+      "gold_answer": 26.0,
+      "final_answer": 26.0,
+      "initial_answer": 26.0,
+      "is_correct": true,
+      "flagged_error": true
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0176",
+      "gold_answer": 556.0,
+      "final_answer": 556.0,
+      "initial_answer": 556.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0178",
+      "gold_answer": 1121.0,
+      "final_answer": 1121.0,
+      "initial_answer": 1121.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0183",
+      "gold_answer": 1149.0,
+      "final_answer": 1149.0,
+      "initial_answer": 1149.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "oracle_detection_isolation",
+      "problem_id": "synth_0184",
+      "gold_answer": 810.0,
+      "final_answer": 810.0,
+      "initial_answer": 810.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "baseline",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "placebo_critique",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "condition": "checksum_critique",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "baseline",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    },
+    {
+      "model": "openai/gpt-4o-mini",
+      "condition": "freeform_critique",
+      "problem_id": "synth_0194",
+      "gold_answer": 35.0,
+      "final_answer": 35.0,
+      "initial_answer": 35.0,
+      "is_correct": true,
+      "flagged_error": false
+    }
+  ]
+}

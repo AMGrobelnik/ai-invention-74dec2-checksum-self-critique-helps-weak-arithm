@@ -1,0 +1,2542 @@
+{
+  "metadata": {
+    "source": "openai/gsm8k (main config, train+test) + procedural synthetic template generator",
+    "description": "Multi-step arithmetic word problems with computation traces, plus deterministic error-injection variants labeled by mod-9 checksum detectability."
+  },
+  "datasets": [
+    {
+      "dataset": "arithmetic_checksum_dataset",
+      "examples": [
+        {
+          "input": "Mike decides to buy a new camera.  He wants to buy a top-of-the-line camera but he decides to wait for the new model to come out.  The new model costs 30% more than the current model.  The old camera cost $4000.  He gets $200 off a $400 lens he bought.  How much did he pay for the camera and lens?",
+          "output": "5400",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_3582",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 4000,
+              "operand_2": 0.3,
+              "operation": "*",
+              "result": 1200,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 4000,
+              "operand_2": 1200,
+              "operation": "+",
+              "result": 5200,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 400,
+              "operand_2": 200,
+              "operation": "-",
+              "result": 200,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 3,
+              "operand_1": 5200,
+              "operand_2": 200,
+              "operation": "+",
+              "result": 5400,
+              "depends_on_step": [
+                1,
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 5400,
+          "metadata_fold": 0
+        },
+        {
+          "input": "An amusement park sells tickets for $3. This week it welcomed 100 people per day but on Saturday it was visited by 200 people and on Sunday by 300. How much money did it make overall in a week?",
+          "output": "3000",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_5169",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 100,
+              "operand_2": 5,
+              "operation": "*",
+              "result": 500,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 200,
+              "operand_2": 300,
+              "operation": "+",
+              "result": 500,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 2,
+              "operand_1": 500,
+              "operand_2": 500,
+              "operation": "+",
+              "result": 1000,
+              "depends_on_step": [
+                0,
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 1000,
+              "operand_2": 3,
+              "operation": "*",
+              "result": 3000,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 3000,
+          "metadata_fold": 0
+        },
+        {
+          "input": "It costs $.10 to print one page. Jenny wants to print 7 copies of her 25-page essay. She also wants to buy 7 pens that each cost $1.50. If she pays the store with 2 twenty dollar bills, how much money should she get in change?",
+          "output": "12",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_300",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 7,
+              "operand_2": 25,
+              "operation": "*",
+              "result": 175,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 175,
+              "operand_2": 0.1,
+              "operation": "*",
+              "result": 17.5,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 7,
+              "operand_2": 1.5,
+              "operation": "*",
+              "result": 10.5,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 3,
+              "operand_1": 17.5,
+              "operand_2": 10.5,
+              "operation": "+",
+              "result": 28,
+              "depends_on_step": [
+                1,
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 2,
+              "operand_2": 20,
+              "operation": "*",
+              "result": 40,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 5,
+              "operand_1": 40,
+              "operand_2": 28,
+              "operation": "-",
+              "result": 12,
+              "depends_on_step": [
+                3,
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 12,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Jessie's community built a new hedge. Each section of the hedge used 30 pieces of concrete blocks that cost $2 per piece. The hedge has eight sections. How much did they spend on the concrete blocks?",
+          "output": "480",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_5868",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 30,
+              "operand_2": 8,
+              "operation": "*",
+              "result": 240,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 240,
+              "operand_2": 2,
+              "operation": "*",
+              "result": 480,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 480,
+          "metadata_fold": 0
+        },
+        {
+          "input": "James invests $2000 a week into his bank account.  He had $250,000 in his account when the year started.  At the end of the year, he gets a windfall that is worth 50% more than what he has in his bank account.   How much money does he have?",
+          "output": "885000",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_1342",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 5,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 2000,
+              "operand_2": 52,
+              "operation": "*",
+              "result": 104000,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 250000,
+              "operand_2": 104000,
+              "operation": "+",
+              "result": 354000,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 0.5,
+              "operand_2": 354000,
+              "operation": "*",
+              "result": 177000,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 177000,
+              "operand_2": 354000,
+              "operation": "+",
+              "result": 531000,
+              "depends_on_step": [
+                1,
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 531000,
+              "operand_2": 354000,
+              "operation": "+",
+              "result": 885000,
+              "depends_on_step": [
+                1,
+                3
+              ]
+            }
+          ],
+          "metadata_final_answer": 885000,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Joe\u2019s mother gave him $56 to go to the store. Joe bought 7 notebooks and 2 books. Each notebook costs $4 and each book costs $7. How much money does Joe have left?",
+          "output": "14",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_4351",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 7,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 28,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 2,
+              "operand_2": 7,
+              "operation": "*",
+              "result": 14,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 2,
+              "operand_1": 28,
+              "operand_2": 14,
+              "operation": "+",
+              "result": 42,
+              "depends_on_step": [
+                0,
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 56,
+              "operand_2": 42,
+              "operation": "-",
+              "result": 14,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 14,
+          "metadata_fold": 0
+        },
+        {
+          "input": "There are 3 workers producing chairs in a furniture factory. Each of them produces 4 chairs an hour. As a group, they produce an additional chair every 6 hours. In total, how many chairs have been produced after 6 hours?",
+          "output": "73",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_2459",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 3,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 3,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 12,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 12,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 72,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 72,
+              "operand_2": 1,
+              "operation": "+",
+              "result": 73,
+              "depends_on_step": [
+                1
+              ]
+            }
+          ],
+          "metadata_final_answer": 73,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A farmer gets 20 pounds of bacon on average from a pig. He sells each pound for $6 at the monthly farmer\u2019s market. This month\u2019s pig is a runt that grew to only half the size of the average pig. How many dollars will the farmer make from the pig\u2019s bacon?",
+          "output": "60",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_4112",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 20,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 10,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 10,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 60,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 60,
+          "metadata_fold": 0
+        },
+        {
+          "input": "To make a lasagna Martha needs 1.5kg of cheese and 500 grams of meat. The cheese costs $6 per kilogram, and the meat $8 per kilogram. How much does Martha need to pay for the ingredients?",
+          "output": "13",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_3655",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 1.5,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 9,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 4,
+              "operand_2": 9,
+              "operation": "+",
+              "result": 13,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 13,
+          "metadata_fold": 1
+        },
+        {
+          "input": "The cheese pizza is cut into 12 slices and the pepperoni pizza is cut into 8 slices.  If Kate\u2019s 6 friends each eat 6 cheese pizza slices and 4 pepperoni pizza slices, how many pizza pies does she need to buy?",
+          "output": "6",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_8658",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 5,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 6,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 36,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 6,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 24,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 2,
+              "operand_1": 36,
+              "operand_2": 12,
+              "operation": "/",
+              "result": 3,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 24,
+              "operand_2": 8,
+              "operation": "/",
+              "result": 3,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 3,
+              "operand_2": 3,
+              "operation": "+",
+              "result": 6,
+              "depends_on_step": [
+                2,
+                3
+              ]
+            }
+          ],
+          "metadata_final_answer": 6,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A recipe uses 426 grams of an ingredient per batch, and a baker scales it up to 6 batches. 26 grams are lost to spillage during mixing. The batter is then split evenly into 2 equal portions and only one portion is kept. 73 grams are lost to spillage during mixing. How many grams remain in the kept portion?",
+          "output": "1192",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_116",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 426,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 2556,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 2556,
+              "operand_2": 26,
+              "operation": "-",
+              "result": 2530,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 2530,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 1265,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 1265,
+              "operand_2": 73,
+              "operation": "-",
+              "result": 1192,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 1192,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A traveler moves at 65 units per hour for 6 hours on the first leg of a trip. On the next leg they travel 2 more hours at 136 units per hour. They then backtrack 49 units to retrieve a dropped item. On the next leg they travel 4 more hours at 90 units per hour. They then backtrack 100 units to retrieve a dropped item. On the next leg they travel 6 more hours at 120 units per hour. What is the total distance covered?",
+          "output": "1593",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_182",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 65,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 390,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 390,
+              "operand_2": 272,
+              "operation": "+",
+              "result": 662,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 662,
+              "operand_2": 49,
+              "operation": "-",
+              "result": 613,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 613,
+              "operand_2": 360,
+              "operation": "+",
+              "result": 973,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 973,
+              "operand_2": 100,
+              "operation": "-",
+              "result": 873,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 873,
+              "operand_2": 720,
+              "operation": "+",
+              "result": 1593,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 1593,
+          "metadata_fold": 1
+        },
+        {
+          "input": "An item costs $757 and a shopper buys 8 of them. Then the shopper adds $174 in shipping/extra fees. Then a discount of one-5th of the running total is applied. Then the shopper adds $211 in shipping/extra fees. Then a discount of one-2th of the running total is applied. Then the shopper adds $8 in shipping/extra fees. What is the final total?",
+          "output": "2606",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_195",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 757,
+              "operand_2": 8,
+              "operation": "*",
+              "result": 6056,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 6056,
+              "operand_2": 174,
+              "operation": "+",
+              "result": 6230,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 6230,
+              "operand_2": 1246,
+              "operation": "-",
+              "result": 4984,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 4984,
+              "operand_2": 211,
+              "operation": "+",
+              "result": 5195,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 5195,
+              "operand_2": 2597,
+              "operation": "-",
+              "result": 2598,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 2598,
+              "operand_2": 8,
+              "operation": "+",
+              "result": 2606,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 2606,
+          "metadata_fold": 1
+        },
+        {
+          "input": "A recipe uses 312 grams of an ingredient per batch, and a baker scales it up to 2 batches. 26 grams are lost to spillage during mixing. The batter is then split evenly into 2 equal portions and only one portion is kept. 21 grams are lost to spillage during mixing. The batter is then split evenly into 2 equal portions and only one portion is kept. 153 grams are lost to spillage during mixing. How many grams remain in the kept portion?",
+          "output": "-14",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_186",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 312,
+              "operand_2": 2,
+              "operation": "*",
+              "result": 624,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 624,
+              "operand_2": 26,
+              "operation": "-",
+              "result": 598,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 598,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 299,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 299,
+              "operand_2": 21,
+              "operation": "-",
+              "result": 278,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 278,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 139,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 139,
+              "operand_2": 153,
+              "operation": "-",
+              "result": -14,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": -14,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A warehouse starts with 835 units in stock and receives a restock of 318 units. Then 83 units are sold. The remaining stock is repacked into 2 equal-sized crates and one crate is shipped out for audit. Then 131 units are sold. How many units are in the audited crate?",
+          "output": "404",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_104",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 835,
+              "operand_2": 318,
+              "operation": "+",
+              "result": 1153,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 1153,
+              "operand_2": 83,
+              "operation": "-",
+              "result": 1070,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 1070,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 535,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 535,
+              "operand_2": 131,
+              "operation": "-",
+              "result": 404,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 404,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A traveler moves at 8 units per hour for 4 hours on the first leg of a trip. On the next leg they travel 4 more hours at 6 units per hour. What is the total distance covered?",
+          "output": "56",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_2",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 8,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 32,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 32,
+              "operand_2": 24,
+              "operation": "+",
+              "result": 56,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 56,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A worker logs 8 units of work and a supervisor multiplies it by a conversion factor of 4. A bonus of 19 converted units is added. What is the final converted amount for that team?",
+          "output": "51",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_18",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 8,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 32,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 32,
+              "operand_2": 19,
+              "operation": "+",
+              "result": 51,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 51,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A warehouse starts with 59 units in stock and receives a restock of 24 units. Then 17 units are sold. The remaining stock is repacked into 2 equal-sized crates and one crate is shipped out for audit. Then 5 units are sold. The remaining stock is repacked into 4 equal-sized crates and one crate is shipped out for audit. Then 1 units are sold. How many units are in the audited crate?",
+          "output": "6",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_174",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 59,
+              "operand_2": 24,
+              "operation": "+",
+              "result": 83,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 83,
+              "operand_2": 17,
+              "operation": "-",
+              "result": 66,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 66,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 33,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 33,
+              "operand_2": 5,
+              "operation": "-",
+              "result": 28,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 28,
+              "operand_2": 4,
+              "operation": "/",
+              "result": 7,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 7,
+              "operand_2": 1,
+              "operation": "-",
+              "result": 6,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "A worker logs 13 units of work and a supervisor multiplies it by a conversion factor of 5. A bonus of 15 converted units is added. What is the final converted amount for that team?",
+          "output": "80",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_3",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 13,
+              "operand_2": 5,
+              "operation": "*",
+              "result": 65,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 65,
+              "operand_2": 15,
+              "operation": "+",
+              "result": 80,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 80,
+          "metadata_fold": 0
+        },
+        {
+          "input": "An item costs $15 and a shopper buys 2 of them. Then the shopper adds $5 in shipping/extra fees. Then a discount of one-5th of the running total is applied. What is the final total?",
+          "output": "28",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_40",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 3,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 15,
+              "operand_2": 2,
+              "operation": "*",
+              "result": 30,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 30,
+              "operand_2": 5,
+              "operation": "+",
+              "result": 35,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 35,
+              "operand_2": 7,
+              "operation": "-",
+              "result": 28,
+              "depends_on_step": [
+                1
+              ]
+            }
+          ],
+          "metadata_final_answer": 28,
+          "metadata_fold": 1
+        },
+        {
+          "input": "A recipe uses 456 grams of an ingredient per batch, and a baker scales it up to 5 batches. 151 grams are lost to spillage during mixing. An extra 58 grams are added from a backup batch. 45 grams are lost to spillage during mixing. The batter is then split evenly into 3 equal portions and only one portion is kept. 112 grams are lost to spillage during mixing. How many grams remain in the kept portion?",
+          "output": "602",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_196",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 456,
+              "operand_2": 5,
+              "operation": "*",
+              "result": 2280,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 2280,
+              "operand_2": 151,
+              "operation": "-",
+              "result": 2129,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 2129,
+              "operand_2": 58,
+              "operation": "+",
+              "result": 2187,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 2187,
+              "operand_2": 45,
+              "operation": "-",
+              "result": 2142,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 2142,
+              "operand_2": 3,
+              "operation": "/",
+              "result": 714,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 714,
+              "operand_2": 112,
+              "operation": "-",
+              "result": 602,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 602,
+          "metadata_fold": 1
+        },
+        {
+          "input": "A question and answer forum has 200 members. The average number of answers posted by each member on the forum is three times as many as the number of questions asked. If each user posts an average of 3 questions per hour, calculate the total number of questions and answers posted on the forum by its users in a day.",
+          "output": "57600",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_2048",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 3,
+              "operand_2": 3,
+              "operation": "*",
+              "result": 9,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 24,
+              "operand_2": 3,
+              "operation": "*",
+              "result": 72,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 2,
+              "operand_1": 200,
+              "operand_2": 72,
+              "operation": "*",
+              "result": 14400,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 9,
+              "operand_2": 24,
+              "operation": "*",
+              "result": 216,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 200,
+              "operand_2": 216,
+              "operation": "*",
+              "result": 43200,
+              "depends_on_step": [
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 43200,
+              "operand_2": 14400,
+              "operation": "+",
+              "result": 57600,
+              "depends_on_step": [
+                2,
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 57600,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A recipe uses 547 grams of an ingredient per batch, and a baker scales it up to 3 batches. 137 grams are lost to spillage during mixing. How many grams remain in the kept portion?",
+          "output": "1504",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_36",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 547,
+              "operand_2": 3,
+              "operation": "*",
+              "result": 1641,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 1641,
+              "operand_2": 137,
+              "operation": "-",
+              "result": 1504,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 1504,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Todd bought a pair of jeans that cost $125 at full price. The jeans were on sale for 20% off. He then applied a coupon that took off $10. He paid with a store credit card that gave him another 10% off the remaining amount. How many dollars did he save on the original price of the jeans?",
+          "output": "44",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_1443",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 125,
+              "operand_2": 5,
+              "operation": "/",
+              "result": 25,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 125,
+              "operand_2": 25,
+              "operation": "-",
+              "result": 100,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 100,
+              "operand_2": 10,
+              "operation": "-",
+              "result": 90,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 90,
+              "operand_2": 10,
+              "operation": "/",
+              "result": 9,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 90,
+              "operand_2": 9,
+              "operation": "-",
+              "result": 81,
+              "depends_on_step": [
+                2,
+                3
+              ]
+            },
+            {
+              "step_index": 5,
+              "operand_1": 125,
+              "operand_2": 81,
+              "operation": "-",
+              "result": 44,
+              "depends_on_step": [
+                4
+              ]
+            }
+          ],
+          "metadata_final_answer": 44,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A recipe uses 766 grams of an ingredient per batch, and a baker scales it up to 4 batches. 22 grams are lost to spillage during mixing. The batter is then split evenly into 3 equal portions and only one portion is kept. 26 grams are lost to spillage during mixing. The batter is then split evenly into 2 equal portions and only one portion is kept. How many grams remain in the kept portion?",
+          "output": "494",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_141",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 5,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 766,
+              "operand_2": 4,
+              "operation": "*",
+              "result": 3064,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 3064,
+              "operand_2": 22,
+              "operation": "-",
+              "result": 3042,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 3042,
+              "operand_2": 3,
+              "operation": "/",
+              "result": 1014,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 1014,
+              "operand_2": 26,
+              "operation": "-",
+              "result": 988,
+              "depends_on_step": [
+                2
+              ]
+            },
+            {
+              "step_index": 4,
+              "operand_1": 988,
+              "operand_2": 2,
+              "operation": "/",
+              "result": 494,
+              "depends_on_step": [
+                3
+              ]
+            }
+          ],
+          "metadata_final_answer": 494,
+          "metadata_fold": 0
+        },
+        {
+          "input": "An item costs $214 and a shopper buys 6 of them. Then the shopper adds $195 in shipping/extra fees. Then a discount of one-4th of the running total is applied. What is the final total?",
+          "output": "1110",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_65",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 214,
+              "operand_2": 6,
+              "operation": "*",
+              "result": 1284,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 1284,
+              "operand_2": 195,
+              "operation": "+",
+              "result": 1479,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 1479,
+              "operand_2": 369,
+              "operation": "-",
+              "result": 1110,
+              "depends_on_step": [
+                1
+              ]
+            }
+          ],
+          "metadata_final_answer": 1110,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Gerald spends $100 a month on baseball supplies. His season is 4 months long. He wants to use the months he's not playing baseball to save up by raking, shoveling, and mowing lawns. He charges $10 for each. How many chores does he need to average a month to save up for his supplies?",
+          "output": "5",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_50",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 4,
+              "operand_2": 100,
+              "operation": "*",
+              "result": 400,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 12,
+              "operand_2": 4,
+              "operation": "-",
+              "result": 8,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 2,
+              "operand_1": 400,
+              "operand_2": 8,
+              "operation": "/",
+              "result": 50,
+              "depends_on_step": [
+                0,
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 50,
+              "operand_2": 10,
+              "operation": "/",
+              "result": 5,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 5,
+          "metadata_fold": 0
+        },
+        {
+          "input": "A warehouse starts with 631 units in stock and receives a restock of 273 units. Then 213 units are sold. Then 126 more units are sold before repacking. Then 88 units are sold. How many units are in the audited crate?",
+          "output": "477",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_114",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 631,
+              "operand_2": 273,
+              "operation": "+",
+              "result": 904,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 904,
+              "operand_2": 213,
+              "operation": "-",
+              "result": 691,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 691,
+              "operand_2": 126,
+              "operation": "-",
+              "result": 565,
+              "depends_on_step": [
+                1
+              ]
+            },
+            {
+              "step_index": 3,
+              "operand_1": 565,
+              "operand_2": 88,
+              "operation": "-",
+              "result": 477,
+              "depends_on_step": [
+                2
+              ]
+            }
+          ],
+          "metadata_final_answer": 477,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Tom catches crabs for a living.  He has 8 crab buckets that he checks every day.  Each crab bucket gets 12 crabs.  He sells each of these crabs for $5 each.  How much money does he make per week?",
+          "output": "3360",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_6008",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 8,
+              "operand_2": 12,
+              "operation": "*",
+              "result": 96,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 96,
+              "operand_2": 5,
+              "operation": "*",
+              "result": 480,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 7,
+              "operand_2": 480,
+              "operation": "*",
+              "result": 3360,
+              "depends_on_step": [
+                1
+              ]
+            }
+          ],
+          "metadata_final_answer": 3360,
+          "metadata_fold": 0
+        },
+        {
+          "input": "An item costs $31 and a shopper buys 8 of them. Then the shopper adds $6 in shipping/extra fees. Then a discount of one-4th of the running total is applied. What is the final total?",
+          "output": "191",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "synthetic_50",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 31,
+              "operand_2": 8,
+              "operation": "*",
+              "result": 248,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 248,
+              "operand_2": 6,
+              "operation": "+",
+              "result": 254,
+              "depends_on_step": [
+                0
+              ]
+            },
+            {
+              "step_index": 2,
+              "operand_1": 254,
+              "operand_2": 63,
+              "operation": "-",
+              "result": 191,
+              "depends_on_step": [
+                1
+              ]
+            }
+          ],
+          "metadata_final_answer": 191,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A warehouse starts with 835 units in stock and receives a restock of 318 units. Then 83 units are sold. The remaining stock is repacked into 2 equal-sized crates and one crate is shipped out for audit. Then 131 units are sold. How many units are in the audited crate?\nReasoning trace:\n  Step 0: 835 + 318 = 153\n  Step 1: 153 - 83 = 70\n  Step 2: 70 / 2 = 35.0\n  Step 3: 35.0 - 131 = -96.0",
+          "output": "checksum_detectable|correct_final_answer=404",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_104",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 835,
+            "operand_2": 318,
+            "operation": "+",
+            "result": 1153,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 835,
+            "operand_2": 318,
+            "operation": "+",
+            "result": 153,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": -96.0,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: An item costs $757 and a shopper buys 8 of them. Then the shopper adds $174 in shipping/extra fees. Then a discount of one-5th of the running total is applied. Then the shopper adds $211 in shipping/extra fees. Then a discount of one-2th of the running total is applied. Then the shopper adds $8 in shipping/extra fees. What is the final total?\nReasoning trace:\n  Step 0: 757 * 8 = 6056\n  Step 1: 6056 + 174 = 6220\n  Step 2: 6220 - 1246 = 4974\n  Step 3: 4974 + 211 = 5185\n  Step 4: 5185 - 2597 = 2588\n  Step 5: 2588 + 8 = 2596",
+          "output": "checksum_detectable|correct_final_answer=2606",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_195",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 6056,
+            "operand_2": 174,
+            "operation": "+",
+            "result": 6230,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 6056,
+            "operand_2": 174,
+            "operation": "+",
+            "result": 6220,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_final_answer": 2596,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: Mike decides to buy a new camera.  He wants to buy a top-of-the-line camera but he decides to wait for the new model to come out.  The new model costs 30% more than the current model.  The old camera cost $4000.  He gets $200 off a $400 lens he bought.  How much did he pay for the camera and lens?\nReasoning trace:\n  Step 0: 4000 * 0.3 = 1100\n  Step 1: 4000 + 1100 = 5100\n  Step 2: 400 - 200 = 200\n  Step 3: 5100 + 200 = 5300",
+          "output": "checksum_detectable|correct_final_answer=5400",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_3582",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 4000,
+            "operand_2": 0.3,
+            "operation": "*",
+            "result": 1200,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 4000,
+            "operand_2": 0.3,
+            "operation": "*",
+            "result": 1100,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 5300,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A farmer gets 20 pounds of bacon on average from a pig. He sells each pound for $6 at the monthly farmer\u2019s market. This month\u2019s pig is a runt that grew to only half the size of the average pig. How many dollars will the farmer make from the pig\u2019s bacon?\nReasoning trace:\n  Step 0: 20 / 2 = 10\n  Step 1: 10 * 6 = 50",
+          "output": "checksum_detectable|correct_final_answer=60",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_4112",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 10,
+            "operand_2": 6,
+            "operation": "*",
+            "result": 60,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 10,
+            "operand_2": 6,
+            "operation": "*",
+            "result": 50,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_final_answer": 50,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Joe\u2019s mother gave him $56 to go to the store. Joe bought 7 notebooks and 2 books. Each notebook costs $4 and each book costs $7. How much money does Joe have left?\nReasoning trace:\n  Step 0: 7 * 4 = 28\n  Step 1: 2 * 7 = 14\n  Step 2: 28 + 14 = 42\n  Step 3: 56 - 42 = 98",
+          "output": "checksum_detectable|correct_final_answer=14",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_4351",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 3,
+          "metadata_original_step": {
+            "step_index": 3,
+            "operand_1": 56,
+            "operand_2": 42,
+            "operation": "-",
+            "result": 14,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 3,
+            "operand_1": 56,
+            "operand_2": 42,
+            "operation": "-",
+            "result": 98,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_final_answer": 98,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: An item costs $757 and a shopper buys 8 of them. Then the shopper adds $174 in shipping/extra fees. Then a discount of one-5th of the running total is applied. Then the shopper adds $211 in shipping/extra fees. Then a discount of one-2th of the running total is applied. Then the shopper adds $8 in shipping/extra fees. What is the final total?\nReasoning trace:\n  Step 0: 757 * 8 = 6056\n  Step 1: 6056 + 174 = 6230\n  Step 2: 6230 - 1246 = 7476\n  Step 3: 7476 + 211 = 7687\n  Step 4: 7687 - 2597 = 5090\n  Step 5: 5090 + 8 = 5098",
+          "output": "checksum_detectable|correct_final_answer=2606",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_195",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 6230,
+            "operand_2": 1246,
+            "operation": "-",
+            "result": 4984,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 6230,
+            "operand_2": 1246,
+            "operation": "-",
+            "result": 7476,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 5098,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: Mike decides to buy a new camera.  He wants to buy a top-of-the-line camera but he decides to wait for the new model to come out.  The new model costs 30% more than the current model.  The old camera cost $4000.  He gets $200 off a $400 lens he bought.  How much did he pay for the camera and lens?\nReasoning trace:\n  Step 0: 4000 * 0.3 = 1200\n  Step 1: 4000 + 1200 = 5200\n  Step 2: 400 - 200 = 600\n  Step 3: 5200 + 600 = 5800",
+          "output": "checksum_detectable|correct_final_answer=5400",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_3582",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 400,
+            "operand_2": 200,
+            "operation": "-",
+            "result": 200,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 400,
+            "operand_2": 200,
+            "operation": "-",
+            "result": 600,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 5800,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A traveler moves at 65 units per hour for 6 hours on the first leg of a trip. On the next leg they travel 2 more hours at 136 units per hour. They then backtrack 49 units to retrieve a dropped item. On the next leg they travel 4 more hours at 90 units per hour. They then backtrack 100 units to retrieve a dropped item. On the next leg they travel 6 more hours at 120 units per hour. What is the total distance covered?\nReasoning trace:\n  Step 0: 65 * 6 = 390\n  Step 1: 390 + 272 = 118\n  Step 2: 118 - 49 = 69\n  Step 3: 69 + 360 = 429\n  Step 4: 429 - 100 = 329\n  Step 5: 329 + 720 = 1049",
+          "output": "checksum_detectable|correct_final_answer=1593",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_182",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 390,
+            "operand_2": 272,
+            "operation": "+",
+            "result": 662,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 390,
+            "operand_2": 272,
+            "operation": "+",
+            "result": 118,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_final_answer": 1049,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: A worker logs 8 units of work and a supervisor multiplies it by a conversion factor of 4. A bonus of 19 converted units is added. What is the final converted amount for that team?\nReasoning trace:\n  Step 0: 8 * 4 = 256\n  Step 1: 256 + 19 = 275",
+          "output": "checksum_detectable|correct_final_answer=51",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_18",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 8,
+            "operand_2": 4,
+            "operation": "*",
+            "result": 32,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 8,
+            "operand_2": 4,
+            "operation": "*",
+            "result": 256,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 275,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A farmer gets 20 pounds of bacon on average from a pig. He sells each pound for $6 at the monthly farmer\u2019s market. This month\u2019s pig is a runt that grew to only half the size of the average pig. How many dollars will the farmer make from the pig\u2019s bacon?\nReasoning trace:\n  Step 0: 20 / 2 = 2.0\n  Step 1: 2.0 * 6 = 12.0",
+          "output": "checksum_detectable|correct_final_answer=60",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_4112",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 20,
+            "operand_2": 2,
+            "operation": "/",
+            "result": 10,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 20,
+            "operand_2": 2,
+            "operation": "/",
+            "result": 2.0,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 12.0,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 2,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Mike decides to buy a new camera.  He wants to buy a top-of-the-line camera but he decides to wait for the new model to come out.  The new model costs 30% more than the current model.  The old camera cost $4000.  He gets $200 off a $400 lens he bought.  How much did he pay for the camera and lens?\nReasoning trace:\n  Step 0: 4000 * 0.3 = 20800000\n  Step 1: 4000 + 20800000 = 20804000\n  Step 2: 400 - 200 = 200\n  Step 3: 20804000 + 200 = 20804200",
+          "output": "checksum_detectable|correct_final_answer=5400",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_3582",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 4000,
+            "operand_2": 0.3,
+            "operation": "*",
+            "result": 1200,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 4000,
+            "operand_2": 0.3,
+            "operation": "*",
+            "result": 20800000,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 20804200,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Joe\u2019s mother gave him $56 to go to the store. Joe bought 7 notebooks and 2 books. Each notebook costs $4 and each book costs $7. How much money does Joe have left?\nReasoning trace:\n  Step 0: 7 * 4 = 28\n  Step 1: 2 * 7 = 56\n  Step 2: 28 + 56 = 84\n  Step 3: 56 - 84 = -28",
+          "output": "checksum_detectable|correct_final_answer=14",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_4351",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 2,
+            "operand_2": 7,
+            "operation": "*",
+            "result": 14,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 2,
+            "operand_2": 7,
+            "operation": "*",
+            "result": 56,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": -28,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Joe\u2019s mother gave him $56 to go to the store. Joe bought 7 notebooks and 2 books. Each notebook costs $4 and each book costs $7. How much money does Joe have left?\nReasoning trace:\n  Step 0: 7 * 4 = 28\n  Step 1: 2 * 7 = 14\n  Step 2: 28 + 14 = 24\n  Step 3: 56 - 24 = 32",
+          "output": "checksum_invisible|correct_final_answer=14",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_4351",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 28,
+            "operand_2": 14,
+            "operation": "+",
+            "result": 42,
+            "depends_on_step": [
+              0,
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 28,
+            "operand_2": 14,
+            "operation": "+",
+            "result": 24,
+            "depends_on_step": [
+              0,
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 32,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: An item costs $15 and a shopper buys 2 of them. Then the shopper adds $5 in shipping/extra fees. Then a discount of one-5th of the running total is applied. What is the final total?\nReasoning trace:\n  Step 0: 15 * 2 = 3\n  Step 1: 3 + 5 = 8\n  Step 2: 8 - 7 = 1",
+          "output": "checksum_invisible|correct_final_answer=28",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_40",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 15,
+            "operand_2": 2,
+            "operation": "*",
+            "result": 30,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 15,
+            "operand_2": 2,
+            "operation": "*",
+            "result": 3,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 1,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 3,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: A warehouse starts with 835 units in stock and receives a restock of 318 units. Then 83 units are sold. The remaining stock is repacked into 2 equal-sized crates and one crate is shipped out for audit. Then 131 units are sold. How many units are in the audited crate?\nReasoning trace:\n  Step 0: 835 + 318 = 1153\n  Step 1: 1153 - 83 = 1070\n  Step 2: 1070 / 2 = 535\n  Step 3: 535 - 131 = 44",
+          "output": "checksum_invisible|correct_final_answer=404",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_104",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 3,
+          "metadata_original_step": {
+            "step_index": 3,
+            "operand_1": 535,
+            "operand_2": 131,
+            "operation": "-",
+            "result": 404,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 3,
+            "operand_1": 535,
+            "operand_2": 131,
+            "operation": "-",
+            "result": 44,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_final_answer": 44,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: An item costs $757 and a shopper buys 8 of them. Then the shopper adds $174 in shipping/extra fees. Then a discount of one-5th of the running total is applied. Then the shopper adds $211 in shipping/extra fees. Then a discount of one-2th of the running total is applied. Then the shopper adds $8 in shipping/extra fees. What is the final total?\nReasoning trace:\n  Step 0: 757 * 8 = 6056\n  Step 1: 6056 + 174 = 6230\n  Step 2: 6230 - 1246 = 4984\n  Step 3: 4984 + 211 = 5195\n  Step 4: 5195 - 2597 = 2598\n  Step 5: 2598 + 8 = 2066",
+          "output": "checksum_invisible|correct_final_answer=2606",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_195",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 5,
+          "metadata_original_step": {
+            "step_index": 5,
+            "operand_1": 2598,
+            "operand_2": 8,
+            "operation": "+",
+            "result": 2606,
+            "depends_on_step": [
+              4
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 5,
+            "operand_1": 2598,
+            "operand_2": 8,
+            "operation": "+",
+            "result": 2066,
+            "depends_on_step": [
+              4
+            ]
+          },
+          "metadata_corrupted_final_answer": 2066,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: An item costs $31 and a shopper buys 8 of them. Then the shopper adds $6 in shipping/extra fees. Then a discount of one-4th of the running total is applied. What is the final total?\nReasoning trace:\n  Step 0: 31 * 8 = 248\n  Step 1: 248 + 6 = 254\n  Step 2: 254 - 63 = 317",
+          "output": "checksum_invisible|correct_final_answer=191",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_50",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 254,
+            "operand_2": 63,
+            "operation": "-",
+            "result": 191,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 254,
+            "operand_2": 63,
+            "operation": "-",
+            "result": 317,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 317,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A warehouse starts with 631 units in stock and receives a restock of 273 units. Then 213 units are sold. Then 126 more units are sold before repacking. Then 88 units are sold. How many units are in the audited crate?\nReasoning trace:\n  Step 0: 631 + 273 = 904\n  Step 1: 904 - 213 = 691\n  Step 2: 691 - 126 = 817\n  Step 3: 817 - 88 = 729",
+          "output": "checksum_invisible|correct_final_answer=477",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_114",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 691,
+            "operand_2": 126,
+            "operation": "-",
+            "result": 565,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 691,
+            "operand_2": 126,
+            "operation": "-",
+            "result": 817,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 729,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A question and answer forum has 200 members. The average number of answers posted by each member on the forum is three times as many as the number of questions asked. If each user posts an average of 3 questions per hour, calculate the total number of questions and answers posted on the forum by its users in a day.\nReasoning trace:\n  Step 0: 3 * 3 = 9\n  Step 1: 24 * 3 = 72\n  Step 2: 200 * 72 = 14400\n  Step 3: 9 * 24 = 216\n  Step 4: 200 * 216 = 43200\n  Step 5: 43200 + 14400 = 28800",
+          "output": "checksum_invisible|correct_final_answer=57600",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_2048",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 5,
+          "metadata_original_step": {
+            "step_index": 5,
+            "operand_1": 43200,
+            "operand_2": 14400,
+            "operation": "+",
+            "result": 57600,
+            "depends_on_step": [
+              2,
+              4
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 5,
+            "operand_1": 43200,
+            "operand_2": 14400,
+            "operation": "+",
+            "result": 28800,
+            "depends_on_step": [
+              2,
+              4
+            ]
+          },
+          "metadata_corrupted_final_answer": 28800,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: An item costs $214 and a shopper buys 6 of them. Then the shopper adds $195 in shipping/extra fees. Then a discount of one-4th of the running total is applied. What is the final total?\nReasoning trace:\n  Step 0: 214 * 6 = 1284\n  Step 1: 1284 + 195 = 1479\n  Step 2: 1479 - 369 = 1848",
+          "output": "checksum_invisible|correct_final_answer=1110",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_65",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 1479,
+            "operand_2": 369,
+            "operation": "-",
+            "result": 1110,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 1479,
+            "operand_2": 369,
+            "operation": "-",
+            "result": 1848,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 1848,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: A recipe uses 766 grams of an ingredient per batch, and a baker scales it up to 4 batches. 22 grams are lost to spillage during mixing. The batter is then split evenly into 3 equal portions and only one portion is kept. 26 grams are lost to spillage during mixing. The batter is then split evenly into 2 equal portions and only one portion is kept. How many grams remain in the kept portion?\nReasoning trace:\n  Step 0: 766 * 4 = 3064\n  Step 1: 3064 - 22 = 3042\n  Step 2: 3042 / 3 = 1014\n  Step 3: 1014 - 26 = 520\n  Step 4: 520 / 2 = 260.0",
+          "output": "checksum_invisible|correct_final_answer=494",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_141",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 3,
+          "metadata_original_step": {
+            "step_index": 3,
+            "operand_1": 1014,
+            "operand_2": 26,
+            "operation": "-",
+            "result": 988,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 3,
+            "operand_1": 1014,
+            "operand_2": 26,
+            "operation": "-",
+            "result": 520,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_final_answer": 260.0,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 5,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Tom catches crabs for a living.  He has 8 crab buckets that he checks every day.  Each crab bucket gets 12 crabs.  He sells each of these crabs for $5 each.  How much money does he make per week?\nReasoning trace:\n  Step 0: 8 * 12 = 3840\n  Step 1: 3840 * 5 = 19200\n  Step 2: 7 * 19200 = 134400",
+          "output": "checksum_invisible|correct_final_answer=3360",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_6008",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 8,
+            "operand_2": 12,
+            "operation": "*",
+            "result": 96,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 8,
+            "operand_2": 12,
+            "operation": "*",
+            "result": 3840,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 134400,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 3,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A recipe uses 547 grams of an ingredient per batch, and a baker scales it up to 3 batches. 137 grams are lost to spillage during mixing. How many grams remain in the kept portion?\nReasoning trace:\n  Step 0: 547 * 3 = 897627\n  Step 1: 897627 - 137 = 897490",
+          "output": "checksum_invisible|correct_final_answer=1504",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_36",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 547,
+            "operand_2": 3,
+            "operation": "*",
+            "result": 1641,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 547,
+            "operand_2": 3,
+            "operation": "*",
+            "result": 897627,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 897490,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: An amusement park sells tickets for $3. This week it welcomed 100 people per day but on Saturday it was visited by 200 people and on Sunday by 300. How much money did it make overall in a week?\nReasoning trace:\n  Step 0: 100 * 5 = 500\n  Step 1: 200 + 300 = 500\n  Step 2: 500 + 500 = 700\n  Step 3: 700 * 3 = 2100",
+          "output": "checksum_invisible|correct_final_answer=3000",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_5169",
+          "metadata_error_type": "wrong_operand_substitution",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 500,
+            "operand_2": 500,
+            "operation": "+",
+            "result": 1000,
+            "depends_on_step": [
+              0,
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 500,
+            "operand_2": 500,
+            "operation": "+",
+            "result": 700,
+            "depends_on_step": [
+              0,
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 2100,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A warehouse starts with 59 units in stock and receives a restock of 24 units. Then 17 units are sold. The remaining stock is repacked into 2 equal-sized crates and one crate is shipped out for audit. Then 5 units are sold. The remaining stock is repacked into 4 equal-sized crates and one crate is shipped out for audit. Then 1 units are sold. How many units are in the audited crate?\nReasoning trace:\n  Step 0: 59 + 24 = 83\n  Step 1: 83 - 17 = 66\n  Step 2: 66 / 2 = 33\n  Step 3: 33 - 5 = 82\n  Step 4: 82 / 4 = 20.5\n  Step 5: 20.5 - 1 = 19.5",
+          "output": "checksum_detectable|correct_final_answer=6",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_174",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 3,
+          "metadata_original_step": {
+            "step_index": 3,
+            "operand_1": 33,
+            "operand_2": 5,
+            "operation": "-",
+            "result": 28,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 3,
+            "operand_1": 33,
+            "operand_2": 5,
+            "operation": "-",
+            "result": 82,
+            "depends_on_step": [
+              2
+            ]
+          },
+          "metadata_corrupted_final_answer": 19.5,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: The cheese pizza is cut into 12 slices and the pepperoni pizza is cut into 8 slices.  If Kate\u2019s 6 friends each eat 6 cheese pizza slices and 4 pepperoni pizza slices, how many pizza pies does she need to buy?\nReasoning trace:\n  Step 0: 6 * 6 = 63\n  Step 1: 6 * 4 = 24\n  Step 2: 63 / 12 = 5.25\n  Step 3: 24 / 8 = 3\n  Step 4: 5.25 + 5.25 = 10.5",
+          "output": "checksum_detectable|correct_final_answer=6",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_8658",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 6,
+            "operand_2": 6,
+            "operation": "*",
+            "result": 36,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 6,
+            "operand_2": 6,
+            "operation": "*",
+            "result": 63,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 10.5,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "small",
+          "metadata_chain_length": 5,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: It costs $.10 to print one page. Jenny wants to print 7 copies of her 25-page essay. She also wants to buy 7 pens that each cost $1.50. If she pays the store with 2 twenty dollar bills, how much money should she get in change?\nReasoning trace:\n  Step 0: 7 * 25 = 175\n  Step 1: 175 * 0.1 = 81\n  Step 2: 7 * 1.5 = 10.5\n  Step 3: 81 + 10.5 = 91.5\n  Step 4: 2 * 20 = 40\n  Step 5: 40 - 91.5 = -51.5",
+          "output": "checksum_detectable|correct_final_answer=12",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_300",
+          "metadata_error_type": "digit_transposition",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 175,
+            "operand_2": 0.1,
+            "operation": "*",
+            "result": 17.5,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 175,
+            "operand_2": 0.1,
+            "operation": "*",
+            "result": 81,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_final_answer": -51.5,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        },
+        {
+          "input": "Problem: Todd bought a pair of jeans that cost $125 at full price. The jeans were on sale for 20% off. He then applied a coupon that took off $10. He paid with a store credit card that gave him another 10% off the remaining amount. How many dollars did he save on the original price of the jeans?\nReasoning trace:\n  Step 0: 125 / 5 = 25\n  Step 1: 125 - 25 = 100\n  Step 2: 100 - 10 = 80\n  Step 3: 80 / 10 = 8.0\n  Step 4: 80 - 8.0 = 72.0\n  Step 5: 125 - 72.0 = 53.0",
+          "output": "checksum_invisible|correct_final_answer=44",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_1443",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 2,
+          "metadata_original_step": {
+            "step_index": 2,
+            "operand_1": 100,
+            "operand_2": 10,
+            "operation": "-",
+            "result": 90,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 2,
+            "operand_1": 100,
+            "operand_2": 10,
+            "operation": "-",
+            "result": 80,
+            "depends_on_step": [
+              1
+            ]
+          },
+          "metadata_corrupted_final_answer": 53.0,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Gerald spends $100 a month on baseball supplies. His season is 4 months long. He wants to use the months he's not playing baseball to save up by raking, shoveling, and mowing lawns. He charges $10 for each. How many chores does he need to average a month to save up for his supplies?\nReasoning trace:\n  Step 0: 4 * 100 = 390\n  Step 1: 12 - 4 = 8\n  Step 2: 390 / 8 = 48.75\n  Step 3: 48.75 / 10 = 4.875",
+          "output": "checksum_invisible|correct_final_answer=5",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_50",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 4,
+            "operand_2": 100,
+            "operation": "*",
+            "result": 400,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 4,
+            "operand_2": 100,
+            "operation": "*",
+            "result": 390,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 4.875,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 4,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: A recipe uses 456 grams of an ingredient per batch, and a baker scales it up to 5 batches. 151 grams are lost to spillage during mixing. An extra 58 grams are added from a backup batch. 45 grams are lost to spillage during mixing. The batter is then split evenly into 3 equal portions and only one portion is kept. 112 grams are lost to spillage during mixing. How many grams remain in the kept portion?\nReasoning trace:\n  Step 0: 456 * 5 = 1280\n  Step 1: 1280 - 151 = 1129\n  Step 2: 1129 + 58 = 1187\n  Step 3: 1187 - 45 = 1142\n  Step 4: 1142 / 3 = 380.666667\n  Step 5: 380.666667 - 112 = 268.666667",
+          "output": "checksum_invisible|correct_final_answer=602",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "synthetic_196",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 456,
+            "operand_2": 5,
+            "operation": "*",
+            "result": 2280,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 456,
+            "operand_2": 5,
+            "operation": "*",
+            "result": 1280,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 268.666667,
+          "metadata_mod9_residue_preserved": true,
+          "metadata_label": "checksum_invisible",
+          "metadata_item_source": "synthetic_template",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 6,
+          "metadata_fold": 1
+        }
+      ]
+    }
+  ]
+}
