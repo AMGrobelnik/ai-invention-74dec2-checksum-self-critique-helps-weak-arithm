@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "source": "openai/gsm8k (main config, train+test) + procedural synthetic template generator",
+    "description": "Multi-step arithmetic word problems with computation traces, plus deterministic error-injection variants labeled by mod-9 checksum detectability."
+  },
+  "datasets": [
+    {
+      "dataset": "arithmetic_checksum_dataset",
+      "examples": [
+        {
+          "input": "Ali and Leila reserve their places for a trip to Egypt. The price is $147 per person, but they were each given a discount of $14 since there are two of them. How much does their trip cost?",
+          "output": "266",
+          "metadata_row_type": "base_item",
+          "metadata_item_id": "gsm8k_6569",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_trace": [
+            {
+              "step_index": 0,
+              "operand_1": 147,
+              "operand_2": 14,
+              "operation": "-",
+              "result": 133,
+              "depends_on_step": null
+            },
+            {
+              "step_index": 1,
+              "operand_1": 133,
+              "operand_2": 2,
+              "operation": "*",
+              "result": 266,
+              "depends_on_step": [
+                0
+              ]
+            }
+          ],
+          "metadata_final_answer": 266,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Ali and Leila reserve their places for a trip to Egypt. The price is $147 per person, but they were each given a discount of $14 since there are two of them. How much does their trip cost?\nRe...",
+          "output": "checksum_detectable|correct_final_answer=266",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_6569",
+          "metadata_error_type": "dropped_carry",
+          "metadata_injected_step_index": 1,
+          "metadata_original_step": {
+            "step_index": 1,
+            "operand_1": 133,
+            "operand_2": 2,
+            "operation": "*",
+            "result": 266,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_step": {
+            "step_index": 1,
+            "operand_1": 133,
+            "operand_2": 2,
+            "operation": "*",
+            "result": 166,
+            "depends_on_step": [
+              0
+            ]
+          },
+          "metadata_corrupted_final_answer": 166,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_fold": 0
+        },
+        {
+          "input": "Problem: Ali and Leila reserve their places for a trip to Egypt. The price is $147 per person, but they were each given a discount of $14 since there are two of them. How much does their trip cost?\nRe...",
+          "output": "checksum_detectable|correct_final_answer=266",
+          "metadata_row_type": "error_variant",
+          "metadata_base_item_id": "gsm8k_6569",
+          "metadata_error_type": "sign_flip",
+          "metadata_injected_step_index": 0,
+          "metadata_original_step": {
+            "step_index": 0,
+            "operand_1": 147,
+            "operand_2": 14,
+            "operation": "-",
+            "result": 133,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_step": {
+            "step_index": 0,
+            "operand_1": 147,
+            "operand_2": 14,
+            "operation": "-",
+            "result": 161,
+            "depends_on_step": null
+          },
+          "metadata_corrupted_final_answer": 322,
+          "metadata_mod9_residue_preserved": false,
+          "metadata_label": "checksum_detectable",
+          "metadata_item_source": "gsm8k_real",
+          "metadata_numeric_range": "large",
+          "metadata_chain_length": 2,
+          "metadata_fold": 0
+        }
+      ]
+    }
+  ]
+}

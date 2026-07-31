@@ -1,0 +1,1043 @@
+{
+  "metadata": {
+    "evaluation_name": "checksum_vs_freeform_self_critique_evaluation",
+    "hypothesis": "Does an explicit checksum self-critique beat free-form self-critique and a matched-length placebo on multi-step arithmetic word problems?",
+    "experiment_metadata_snapshot": {},
+    "n_records_evaluated": 1700,
+    "n_problems": 200,
+    "n_checksum_detectable_problems": 64,
+    "n_checksum_invisible_problems": 136,
+    "models_evaluated": [
+      "anthropic/claude-haiku-4.5",
+      "openai/gpt-4o-mini"
+    ],
+    "detailed_metrics": {
+      "metric1_final_answer_accuracy": {
+        "anthropic/claude-haiku-4.5": {
+          "baseline": {
+            "overall": {
+              "n": 200,
+              "accuracy": 0.765,
+              "wilson_ci_low": 0.7015863111723746,
+              "wilson_ci_high": 0.8184256658476741
+            },
+            "checksum_detectable": {
+              "n": 64,
+              "accuracy": 0.78125,
+              "wilson_ci_low": 0.6656721604337418,
+              "wilson_ci_high": 0.8649768059328052
+            },
+            "checksum_invisible": {
+              "n": 136,
+              "accuracy": 0.7573529411764706,
+              "wilson_ci_low": 0.6788821453520603,
+              "wilson_ci_high": 0.8216847150791841
+            }
+          },
+          "freeform_critique": {
+            "overall": {
+              "n": 200,
+              "accuracy": 0.805,
+              "wilson_ci_low": 0.7445595562538726,
+              "wilson_ci_high": 0.8539447946559949
+            },
+            "checksum_detectable": {
+              "n": 64,
+              "accuracy": 0.8125,
+              "wilson_ci_low": 0.7002563943589847,
+              "wilson_ci_high": 0.8893535682705119
+            },
+            "checksum_invisible": {
+              "n": 136,
+              "accuracy": 0.8014705882352942,
+              "wilson_ci_low": 0.726559586132398,
+              "wilson_ci_high": 0.8598187360870597
+            }
+          },
+          "placebo_critique": {
+            "overall": {
+              "n": 200,
+              "accuracy": 0.91,
+              "wilson_ci_low": 0.8622342812328346,
+              "wilson_ci_high": 0.9423125511378069
+            },
+            "checksum_detectable": {
+              "n": 64,
+              "accuracy": 0.90625,
+              "wilson_ci_low": 0.810171204003544,
+              "wilson_ci_high": 0.9563217474148017
+            },
+            "checksum_invisible": {
+              "n": 136,
+              "accuracy": 0.9117647058823529,
+              "wilson_ci_low": 0.8521015658068821,
+              "wilson_ci_high": 0.9488054108831088
+            }
+          },
+          "checksum_critique": {
+            "overall": {
+              "n": 200,
+              "accuracy": 0.975,
+              "wilson_ci_low": 0.942821659593358,
+              "wilson_ci_high": 0.9892752803482388
+            },
+            "checksum_detectable": {
+              "n": 64,
+              "accuracy": 1.0,
+              "wilson_ci_low": 0.9433759402071946,
+              "wilson_ci_high": 1.0
+            },
+            "checksum_invisible": {
+              "n": 136,
+              "accuracy": 0.9632352941176471,
+              "wilson_ci_low": 0.9168244351957462,
+              "wilson_ci_high": 0.9841959135804936
+            }
+          },
+          "oracle_detection_isolation": {
+            "overall": {
+              "n": 64,
+              "accuracy": 0.9375,
+              "wilson_ci_low": 0.8500251490779133,
+              "wilson_ci_high": 0.9754287986033819
+            },
+            "checksum_detectable": {
+              "n": 64,
+              "accuracy": 0.9375,
+              "wilson_ci_low": 0.8500251490779133,
+              "wilson_ci_high": 0.9754287986033819
+            },
+            "checksum_invisible": {
+              "n": 0,
+              "accuracy": null,
+              "wilson_ci_low": null,
+              "wilson_ci_high": null
+            }
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "baseline": {
+            "overall": {
+              "n": 195,
+              "accuracy": 0.9538461538461539,
+              "wilson_ci_low": 0.9146253066412194,
+              "wilson_ci_high": 0.9755311076687877
+            },
+            "checksum_detectable": {
+              "n": 61,
+              "accuracy": 0.9508196721311475,
+              "wilson_ci_low": 0.8650887247278409,
+              "wilson_ci_high": 0.9831340173312375
+            },
+            "checksum_invisible": {
+              "n": 134,
+              "accuracy": 0.9552238805970149,
+              "wilson_ci_low": 0.9057552772644654,
+              "wilson_ci_high": 0.9793195111466114
+            }
+          },
+          "freeform_critique": {
+            "overall": {
+              "n": 195,
+              "accuracy": 0.9384615384615385,
+              "wilson_ci_low": 0.895531183514045,
+              "wilson_ci_high": 0.964450437090538
+            },
+            "checksum_detectable": {
+              "n": 61,
+              "accuracy": 0.9508196721311475,
+              "wilson_ci_low": 0.8650887247278409,
+              "wilson_ci_high": 0.9831340173312375
+            },
+            "checksum_invisible": {
+              "n": 134,
+              "accuracy": 0.9328358208955224,
+              "wilson_ci_low": 0.8772811261744599,
+              "wilson_ci_high": 0.9642653939541049
+            }
+          },
+          "placebo_critique": {
+            "overall": {
+              "n": 193,
+              "accuracy": 0.9740932642487047,
+              "wilson_ci_low": 0.940797651018338,
+              "wilson_ci_high": 0.9888845465043774
+            },
+            "checksum_detectable": {
+              "n": 60,
+              "accuracy": 0.9666666666666667,
+              "wilson_ci_low": 0.886362257256914,
+              "wilson_ci_high": 0.990810680743802
+            },
+            "checksum_invisible": {
+              "n": 133,
+              "accuracy": 0.9774436090225563,
+              "wilson_ci_low": 0.9357817301552714,
+              "wilson_ci_high": 0.9922995771801788
+            }
+          },
+          "checksum_critique": {
+            "overall": {
+              "n": 192,
+              "accuracy": 0.9635416666666666,
+              "wilson_ci_low": 0.9266691049105195,
+              "wilson_ci_high": 0.9822293534234272
+            },
+            "checksum_detectable": {
+              "n": 60,
+              "accuracy": 0.9666666666666667,
+              "wilson_ci_low": 0.886362257256914,
+              "wilson_ci_high": 0.990810680743802
+            },
+            "checksum_invisible": {
+              "n": 132,
+              "accuracy": 0.9621212121212122,
+              "wilson_ci_low": 0.9143919640569403,
+              "wilson_ci_high": 0.9837138208716185
+            }
+          },
+          "oracle_detection_isolation": {
+            "overall": {
+              "n": 61,
+              "accuracy": 0.9672131147540983,
+              "wilson_ci_low": 0.8881050958050438,
+              "wilson_ci_high": 0.9909621096016376
+            },
+            "checksum_detectable": {
+              "n": 61,
+              "accuracy": 0.9672131147540983,
+              "wilson_ci_low": 0.8881050958050438,
+              "wilson_ci_high": 0.9909621096016376
+            },
+            "checksum_invisible": {
+              "n": 0,
+              "accuracy": null,
+              "wilson_ci_low": null,
+              "wilson_ci_high": null
+            }
+          }
+        }
+      },
+      "metric2_detection_precision_recall_f1": {
+        "anthropic/claude-haiku-4.5": {
+          "baseline": {
+            "checksum_detectable_subset": {
+              "n": 64,
+              "tp": 0,
+              "fp": 0,
+              "fn": 14,
+              "tn": 50,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 136,
+              "tp": 2,
+              "fp": 1,
+              "fn": 31,
+              "tn": 102,
+              "precision": 0.6666666666666666,
+              "recall": 0.06060606060606061,
+              "f1": 0.1111111111111111
+            },
+            "overall": {
+              "n": 200,
+              "tp": 2,
+              "fp": 1,
+              "fn": 45,
+              "tn": 152,
+              "precision": 0.6666666666666666,
+              "recall": 0.0425531914893617,
+              "f1": 0.08
+            }
+          },
+          "freeform_critique": {
+            "checksum_detectable_subset": {
+              "n": 64,
+              "tp": 0,
+              "fp": 0,
+              "fn": 14,
+              "tn": 50,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 136,
+              "tp": 1,
+              "fp": 4,
+              "fn": 26,
+              "tn": 105,
+              "precision": 0.2,
+              "recall": 0.037037037037037035,
+              "f1": 0.0625
+            },
+            "overall": {
+              "n": 200,
+              "tp": 1,
+              "fp": 4,
+              "fn": 40,
+              "tn": 155,
+              "precision": 0.2,
+              "recall": 0.024390243902439025,
+              "f1": 0.04347826086956522
+            }
+          },
+          "placebo_critique": {
+            "checksum_detectable_subset": {
+              "n": 64,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "tn": 58,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 136,
+              "tp": 0,
+              "fp": 0,
+              "fn": 12,
+              "tn": 124,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 200,
+              "tp": 0,
+              "fp": 0,
+              "fn": 18,
+              "tn": 182,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "checksum_critique": {
+            "checksum_detectable_subset": {
+              "n": 64,
+              "tp": 0,
+              "fp": 0,
+              "fn": 0,
+              "tn": 64,
+              "precision": null,
+              "recall": null,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 136,
+              "tp": 0,
+              "fp": 6,
+              "fn": 5,
+              "tn": 125,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 200,
+              "tp": 0,
+              "fp": 6,
+              "fn": 5,
+              "tn": 189,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            }
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "baseline": {
+            "checksum_detectable_subset": {
+              "n": 61,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 58,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 134,
+              "tp": 0,
+              "fp": 0,
+              "fn": 6,
+              "tn": 128,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 195,
+              "tp": 0,
+              "fp": 0,
+              "fn": 9,
+              "tn": 186,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "freeform_critique": {
+            "checksum_detectable_subset": {
+              "n": 61,
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "tn": 57,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 134,
+              "tp": 0,
+              "fp": 0,
+              "fn": 9,
+              "tn": 125,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 195,
+              "tp": 0,
+              "fp": 1,
+              "fn": 12,
+              "tn": 182,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "placebo_critique": {
+            "checksum_detectable_subset": {
+              "n": 60,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2,
+              "tn": 58,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 133,
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "tn": 130,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 193,
+              "tp": 0,
+              "fp": 0,
+              "fn": 5,
+              "tn": 188,
+              "precision": null,
+              "recall": 0.0,
+              "f1": null
+            }
+          },
+          "checksum_critique": {
+            "checksum_detectable_subset": {
+              "n": 58,
+              "tp": 0,
+              "fp": 7,
+              "fn": 0,
+              "tn": 51,
+              "precision": 0.0,
+              "recall": null,
+              "f1": null
+            },
+            "checksum_invisible_subset": {
+              "n": 130,
+              "tp": 0,
+              "fp": 10,
+              "fn": 3,
+              "tn": 117,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            },
+            "overall": {
+              "n": 188,
+              "tp": 0,
+              "fp": 17,
+              "fn": 3,
+              "tn": 168,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": null
+            }
+          }
+        }
+      },
+      "metric3_correction_accuracy_given_flag": {
+        "anthropic/claude-haiku-4.5": {
+          "baseline": {
+            "n_flagged": 3,
+            "correction_accuracy_given_flag": 0.0,
+            "wilson_ci_low": 4.8683609171202235e-17,
+            "wilson_ci_high": 0.5614970317550455
+          },
+          "freeform_critique": {
+            "n_flagged": 5,
+            "correction_accuracy_given_flag": 0.8,
+            "wilson_ci_low": 0.37553462976252533,
+            "wilson_ci_high": 0.9637758913675698
+          },
+          "placebo_critique": {
+            "n_flagged": 0,
+            "correction_accuracy_given_flag": null,
+            "wilson_ci_low": null,
+            "wilson_ci_high": null
+          },
+          "checksum_critique": {
+            "n_flagged": 6,
+            "correction_accuracy_given_flag": 1.0,
+            "wilson_ci_low": 0.6096657120978346,
+            "wilson_ci_high": 1.0
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "baseline": {
+            "n_flagged": 0,
+            "correction_accuracy_given_flag": null,
+            "wilson_ci_low": null,
+            "wilson_ci_high": null
+          },
+          "freeform_critique": {
+            "n_flagged": 1,
+            "correction_accuracy_given_flag": 1.0,
+            "wilson_ci_low": 0.20654931437723742,
+            "wilson_ci_high": 1.0
+          },
+          "placebo_critique": {
+            "n_flagged": 0,
+            "correction_accuracy_given_flag": null,
+            "wilson_ci_low": null,
+            "wilson_ci_high": null
+          },
+          "checksum_critique": {
+            "n_flagged": 17,
+            "correction_accuracy_given_flag": 1.0,
+            "wilson_ci_low": 0.8156818649911483,
+            "wilson_ci_high": 1.0000000000000002
+          }
+        }
+      },
+      "metric4_detection_vs_correction_ablation": {
+        "anthropic/claude-haiku-4.5": {
+          "oracle_given_mismatch_signal_fix_rate": {
+            "n": 64,
+            "fix_rate": 0.9375,
+            "wilson_ci_low": 0.8500251490779133,
+            "wilson_ci_high": 0.9754287986033819
+          },
+          "checksum_condition_correction_accuracy_given_flag": {
+            "n_flagged": 6,
+            "correction_accuracy_given_flag": 1.0,
+            "wilson_ci_low": 0.6096657120978346,
+            "wilson_ci_high": 1.0
+          },
+          "interpretation": "gap = oracle fix_rate - checksum correction_accuracy_given_flag; large positive gap => model CAN use an externally-given mismatch signal much better than it can compute+use its own checksum (bottlenec...",
+          "fix_rate_gap": -0.0625
+        },
+        "openai/gpt-4o-mini": {
+          "oracle_given_mismatch_signal_fix_rate": {
+            "n": 61,
+            "fix_rate": 0.9672131147540983,
+            "wilson_ci_low": 0.8881050958050438,
+            "wilson_ci_high": 0.9909621096016376
+          },
+          "checksum_condition_correction_accuracy_given_flag": {
+            "n_flagged": 17,
+            "correction_accuracy_given_flag": 1.0,
+            "wilson_ci_low": 0.8156818649911483,
+            "wilson_ci_high": 1.0000000000000002
+          },
+          "interpretation": "gap = oracle fix_rate - checksum correction_accuracy_given_flag; large positive gap => model CAN use an externally-given mismatch signal much better than it can compute+use its own checksum (bottlenec...",
+          "fix_rate_gap": -0.032786885245901676
+        }
+      },
+      "metric5_significance_tests": {
+        "anthropic/claude-haiku-4.5": {
+          "freeform_critique_vs_checksum_critique": {
+            "n_common_problems_full": 200,
+            "n_detectable_subset": 64,
+            "mcnemar_full_set": {
+              "n01": 1,
+              "n10": 35,
+              "n_discordant": 36,
+              "p_value": 1.076841726899147e-09,
+              "method": "exact_binomial_mcnemar"
+            },
+            "mcnemar_detectable_subset": {
+              "n01": 0,
+              "n10": 12,
+              "n_discordant": 12,
+              "p_value": 0.00048828125,
+              "method": "exact_binomial_mcnemar"
+            },
+            "bootstrap_detectable_subset": {
+              "diff": -0.1875,
+              "ci_low": -0.28125,
+              "ci_high": -0.09375,
+              "n": 64,
+              "excludes_zero": true
+            },
+            "used_bootstrap_for_detectable_subset_due_to_low_discordant_count": true,
+            "effect_size_pp_detectable_subset": -18.75,
+            "holm_bonferroni": {
+              "p_raw": 0.01,
+              "p_holm_adjusted": 0.04,
+              "reject_at_0.05": true
+            }
+          },
+          "placebo_critique_vs_checksum_critique": {
+            "n_common_problems_full": 200,
+            "n_detectable_subset": 64,
+            "mcnemar_full_set": {
+              "n01": 1,
+              "n10": 14,
+              "n_discordant": 15,
+              "p_value": 0.0009765625,
+              "method": "exact_binomial_mcnemar"
+            },
+            "mcnemar_detectable_subset": {
+              "n01": 0,
+              "n10": 6,
+              "n_discordant": 6,
+              "p_value": 0.03125,
+              "method": "exact_binomial_mcnemar"
+            },
+            "bootstrap_detectable_subset": {
+              "diff": -0.09375,
+              "ci_low": -0.171875,
+              "ci_high": -0.03125,
+              "n": 64,
+              "excludes_zero": true
+            },
+            "used_bootstrap_for_detectable_subset_due_to_low_discordant_count": true,
+            "effect_size_pp_detectable_subset": -9.375,
+            "holm_bonferroni": {
+              "p_raw": 0.01,
+              "p_holm_adjusted": 0.04,
+              "reject_at_0.05": true
+            }
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "freeform_critique_vs_checksum_critique": {
+            "n_common_problems_full": 192,
+            "n_detectable_subset": 60,
+            "mcnemar_full_set": {
+              "n01": 6,
+              "n10": 11,
+              "n_discordant": 17,
+              "p_value": 0.332305908203125,
+              "method": "exact_binomial_mcnemar"
+            },
+            "mcnemar_detectable_subset": {
+              "n01": 1,
+              "n10": 2,
+              "n_discordant": 3,
+              "p_value": 1.0,
+              "method": "exact_binomial_mcnemar"
+            },
+            "bootstrap_detectable_subset": {
+              "diff": -0.01666666666666672,
+              "ci_low": -0.08333333333333326,
+              "ci_high": 0.033333333333333326,
+              "n": 60,
+              "excludes_zero": false
+            },
+            "used_bootstrap_for_detectable_subset_due_to_low_discordant_count": true,
+            "effect_size_pp_detectable_subset": -1.6666666666666718,
+            "holm_bonferroni": {
+              "p_raw": 0.5,
+              "p_holm_adjusted": 1.0,
+              "reject_at_0.05": false
+            }
+          },
+          "placebo_critique_vs_checksum_critique": {
+            "n_common_problems_full": 192,
+            "n_detectable_subset": 60,
+            "mcnemar_full_set": {
+              "n01": 7,
+              "n10": 5,
+              "n_discordant": 12,
+              "p_value": 0.7744140625,
+              "method": "exact_binomial_mcnemar"
+            },
+            "mcnemar_detectable_subset": {
+              "n01": 2,
+              "n10": 2,
+              "n_discordant": 4,
+              "p_value": 1.0,
+              "method": "exact_binomial_mcnemar"
+            },
+            "bootstrap_detectable_subset": {
+              "diff": 0.0,
+              "ci_low": -0.06666666666666665,
+              "ci_high": 0.06666666666666665,
+              "n": 60,
+              "excludes_zero": false
+            },
+            "used_bootstrap_for_detectable_subset_due_to_low_discordant_count": true,
+            "effect_size_pp_detectable_subset": 0.0,
+            "holm_bonferroni": {
+              "p_raw": 0.5,
+              "p_holm_adjusted": 1.0,
+              "reject_at_0.05": false
+            }
+          }
+        }
+      },
+      "metric6_length_confound": {
+        "anthropic/claude-haiku-4.5": {
+          "length_stats_by_condition": {
+            "baseline": {
+              "mean_chars": 548.205,
+              "median_chars": 430.0,
+              "n": 200
+            },
+            "freeform_critique": {
+              "mean_chars": 754.58,
+              "median_chars": 608.5,
+              "n": 200
+            },
+            "placebo_critique": {
+              "mean_chars": 1419.955,
+              "median_chars": 1422.5,
+              "n": 200
+            },
+            "checksum_critique": {
+              "mean_chars": 1354.96,
+              "median_chars": 1267.0,
+              "n": 200
+            }
+          },
+          "placebo_to_checksum_length_ratio": 1.0479682057034894,
+          "regression_correctness_on_condition_plus_token_count": {
+            "reference_condition": "checksum_critique",
+            "feature_order": [
+              "critique_token_count_zscore",
+              "is_freeform_critique",
+              "is_placebo_critique"
+            ],
+            "coef": [
+              2.1444691877992064,
+              -0.1012505596295812,
+              -0.49105326064154986
+            ],
+            "se": [
+              0.23995229547624694,
+              0.16838003893040943,
+              0.38297453706334156
+            ],
+            "z": [
+              8.937064692558813,
+              -0.6013216309531055,
+              -1.2822086408327789
+            ],
+            "p_value": [
+              0.0,
+              0.5476257849928063,
+              0.19976946585977373
+            ]
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "length_stats_by_condition": {
+            "baseline": {
+              "mean_chars": 759.8871794871795,
+              "median_chars": 734.0,
+              "n": 195
+            },
+            "freeform_critique": {
+              "mean_chars": 1025.2564102564102,
+              "median_chars": 975.0,
+              "n": 195
+            },
+            "placebo_critique": {
+              "mean_chars": 1787.2901554404145,
+              "median_chars": 1752.0,
+              "n": 193
+            },
+            "checksum_critique": {
+              "mean_chars": 2163.1979166666665,
+              "median_chars": 1978.0,
+              "n": 192
+            }
+          },
+          "placebo_to_checksum_length_ratio": 0.826225904560088,
+          "regression_correctness_on_condition_plus_token_count": {
+            "reference_condition": "checksum_critique",
+            "feature_order": [
+              "critique_token_count_zscore",
+              "is_freeform_critique",
+              "is_placebo_critique"
+            ],
+            "coef": [
+              2.795255841319417,
+              -0.5193990415373753,
+              0.17828480809771674
+            ],
+            "se": [
+              0.3152236402342657,
+              0.15940773291416646,
+              0.5707300725372272
+            ],
+            "z": [
+              8.867532394594702,
+              -3.2583051778112115,
+              0.31238025938450564
+            ],
+            "p_value": [
+              0.0,
+              0.001120798045288307,
+              0.754751551011057
+            ]
+          }
+        }
+      },
+      "metric7_checksum_computation_audit": {
+        "n_audited": 80,
+        "per_model": {
+          "anthropic/claude-haiku-4.5": {
+            "n_audited": 40,
+            "n_incorrect": 0,
+            "n_scored_correct_or_incorrect": 37,
+            "checksum_computation_error_rate": 0.0
+          },
+          "openai/gpt-4o-mini": {
+            "n_audited": 40,
+            "n_incorrect": 10,
+            "n_scored_correct_or_incorrect": 28,
+            "checksum_computation_error_rate": 0.35714285714285715
+          }
+        },
+        "overall_error_rate": 0.15384615384615385,
+        "total_cost_usd": 0.3791459999999999
+      },
+      "metric7_detection_after_audit_exclusion": {
+        "anthropic/claude-haiku-4.5": {
+          "n_excluded_miscomputed_traces": 0,
+          "n_remaining_detectable_subset": 64,
+          "precision_after_excluding_miscomputed": null,
+          "recall_after_excluding_miscomputed": null
+        },
+        "openai/gpt-4o-mini": {
+          "n_excluded_miscomputed_traces": 10,
+          "n_remaining_detectable_subset": 57,
+          "precision_after_excluding_miscomputed": 0.0,
+          "recall_after_excluding_miscomputed": null
+        }
+      },
+      "metric8_checksum_invisible_negative_control": {
+        "anthropic/claude-haiku-4.5": {
+          "baseline": {
+            "n": 136,
+            "accuracy": 0.7573529411764706,
+            "wilson_ci_low": 0.6788821453520603,
+            "wilson_ci_high": 0.8216847150791841
+          },
+          "freeform_critique": {
+            "n": 136,
+            "accuracy": 0.8014705882352942,
+            "wilson_ci_low": 0.726559586132398,
+            "wilson_ci_high": 0.8598187360870597
+          },
+          "placebo_critique": {
+            "n": 136,
+            "accuracy": 0.9117647058823529,
+            "wilson_ci_low": 0.8521015658068821,
+            "wilson_ci_high": 0.9488054108831088
+          },
+          "checksum_critique": {
+            "n": 136,
+            "accuracy": 0.9632352941176471,
+            "wilson_ci_low": 0.9168244351957462,
+            "wilson_ci_high": 0.9841959135804936
+          }
+        },
+        "openai/gpt-4o-mini": {
+          "baseline": {
+            "n": 134,
+            "accuracy": 0.9552238805970149,
+            "wilson_ci_low": 0.9057552772644654,
+            "wilson_ci_high": 0.9793195111466114
+          },
+          "freeform_critique": {
+            "n": 134,
+            "accuracy": 0.9328358208955224,
+            "wilson_ci_low": 0.8772811261744599,
+            "wilson_ci_high": 0.9642653939541049
+          },
+          "placebo_critique": {
+            "n": 133,
+            "accuracy": 0.9774436090225563,
+            "wilson_ci_low": 0.9357817301552714,
+            "wilson_ci_high": 0.9922995771801788
+          },
+          "checksum_critique": {
+            "n": 132,
+            "accuracy": 0.9621212121212122,
+            "wilson_ci_low": 0.9143919640569403,
+            "wilson_ci_high": 0.9837138208716185
+          }
+        }
+      }
+    }
+  },
+  "metrics_agg": {
+    "acc_claude_haiku_4_5_baseline_overall": 0.765,
+    "acc_claude_haiku_4_5_baseline_checksum_detectable": 0.78125,
+    "acc_claude_haiku_4_5_baseline_checksum_invisible": 0.7573529411764706,
+    "acc_claude_haiku_4_5_freeform_critique_overall": 0.805,
+    "acc_claude_haiku_4_5_freeform_critique_checksum_detectable": 0.8125,
+    "acc_claude_haiku_4_5_freeform_critique_checksum_invisible": 0.8014705882352942,
+    "acc_claude_haiku_4_5_placebo_critique_overall": 0.91,
+    "acc_claude_haiku_4_5_placebo_critique_checksum_detectable": 0.90625,
+    "acc_claude_haiku_4_5_placebo_critique_checksum_invisible": 0.9117647058823529,
+    "acc_claude_haiku_4_5_checksum_critique_overall": 0.975,
+    "acc_claude_haiku_4_5_checksum_critique_checksum_detectable": 1.0,
+    "acc_claude_haiku_4_5_checksum_critique_checksum_invisible": 0.9632352941176471,
+    "acc_claude_haiku_4_5_oracle_detection_isolation_overall": 0.9375,
+    "acc_claude_haiku_4_5_oracle_detection_isolation_checksum_detectable": 0.9375,
+    "acc_gpt_4o_mini_baseline_overall": 0.9538461538461539,
+    "acc_gpt_4o_mini_baseline_checksum_detectable": 0.9508196721311475,
+    "acc_gpt_4o_mini_baseline_checksum_invisible": 0.9552238805970149,
+    "acc_gpt_4o_mini_freeform_critique_overall": 0.9384615384615385,
+    "acc_gpt_4o_mini_freeform_critique_checksum_detectable": 0.9508196721311475,
+    "acc_gpt_4o_mini_freeform_critique_checksum_invisible": 0.9328358208955224,
+    "acc_gpt_4o_mini_placebo_critique_overall": 0.9740932642487047,
+    "acc_gpt_4o_mini_placebo_critique_checksum_detectable": 0.9666666666666667,
+    "acc_gpt_4o_mini_placebo_critique_checksum_invisible": 0.9774436090225563,
+    "acc_gpt_4o_mini_checksum_critique_overall": 0.9635416666666666,
+    "acc_gpt_4o_mini_checksum_critique_checksum_detectable": 0.9666666666666667,
+    "acc_gpt_4o_mini_checksum_critique_checksum_invisible": 0.9621212121212122,
+    "acc_gpt_4o_mini_oracle_detection_isolation_overall": 0.9672131147540983,
+    "acc_gpt_4o_mini_oracle_detection_isolation_checksum_detectable": 0.9672131147540983,
+    "recall_claude_haiku_4_5_baseline": 0.0,
+    "recall_claude_haiku_4_5_freeform_critique": 0.0,
+    "recall_claude_haiku_4_5_placebo_critique": 0.0,
+    "recall_gpt_4o_mini_baseline": 0.0,
+    "precision_gpt_4o_mini_freeform_critique": 0.0,
+    "recall_gpt_4o_mini_freeform_critique": 0.0,
+    "recall_gpt_4o_mini_placebo_critique": 0.0,
+    "precision_gpt_4o_mini_checksum_critique": 0.0,
+    "correction_acc_claude_haiku_4_5_baseline": 0.0,
+    "correction_acc_claude_haiku_4_5_freeform_critique": 0.8,
+    "correction_acc_claude_haiku_4_5_checksum_critique": 1.0,
+    "correction_acc_gpt_4o_mini_freeform_critique": 1.0,
+    "correction_acc_gpt_4o_mini_checksum_critique": 1.0,
+    "oracle_fix_rate_claude_haiku_4_5": 0.9375,
+    "fix_rate_gap_claude_haiku_4_5": -0.0625,
+    "oracle_fix_rate_gpt_4o_mini": 0.9672131147540983,
+    "fix_rate_gap_gpt_4o_mini": -0.032786885245901676,
+    "holm_p_claude_haiku_4_5_freeform_critique_vs_checksum_critique": 0.04,
+    "effect_pp_claude_haiku_4_5_freeform_critique_vs_checksum_critique": -18.75,
+    "holm_p_claude_haiku_4_5_placebo_critique_vs_checksum_critique": 0.04,
+    "effect_pp_claude_haiku_4_5_placebo_critique_vs_checksum_critique": -9.375,
+    "holm_p_gpt_4o_mini_freeform_critique_vs_checksum_critique": 1.0,
+    "effect_pp_gpt_4o_mini_freeform_critique_vs_checksum_critique": -1.6666666666666718,
+    "holm_p_gpt_4o_mini_placebo_critique_vs_checksum_critique": 1.0,
+    "effect_pp_gpt_4o_mini_placebo_critique_vs_checksum_critique": 0.0,
+    "placebo_checksum_length_ratio_claude_haiku_4_5": 1.0479682057034894,
+    "placebo_checksum_length_ratio_gpt_4o_mini": 0.826225904560088,
+    "checksum_computation_error_rate_overall": 0.15384615384615385,
+    "checksum_audit_n_traces": 80.0,
+    "invisible_ctrl_acc_claude_haiku_4_5_baseline": 0.7573529411764706,
+    "invisible_ctrl_acc_claude_haiku_4_5_freeform_critique": 0.8014705882352942,
+    "invisible_ctrl_acc_claude_haiku_4_5_placebo_critique": 0.9117647058823529,
+    "invisible_ctrl_acc_claude_haiku_4_5_checksum_critique": 0.9632352941176471,
+    "invisible_ctrl_acc_gpt_4o_mini_baseline": 0.9552238805970149,
+    "invisible_ctrl_acc_gpt_4o_mini_freeform_critique": 0.9328358208955224,
+    "invisible_ctrl_acc_gpt_4o_mini_placebo_critique": 0.9774436090225563,
+    "invisible_ctrl_acc_gpt_4o_mini_checksum_critique": 0.9621212121212122
+  },
+  "datasets": [
+    {
+      "dataset": "synthetic_multistep_arithmetic_word_problems",
+      "examples": [
+        {
+          "input": "problem_id=synth_0000",
+          "output": "280",
+          "metadata_checksum_detectable": true,
+          "predict_claude_haiku_4_5_baseline": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_baseline_correct": 1.0,
+          "predict_claude_haiku_4_5_freeform_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_freeform_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_placebo_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_placebo_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_checksum_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_checksum_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_oracle_detection_isolation": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": true}",
+          "eval_claude_haiku_4_5_oracle_detection_isolation_correct": 1.0,
+          "predict_gpt_4o_mini_baseline": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_baseline_correct": 1.0,
+          "predict_gpt_4o_mini_oracle_detection_isolation": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_oracle_detection_isolation_correct": 1.0,
+          "predict_gpt_4o_mini_freeform_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_freeform_critique_correct": 1.0,
+          "predict_gpt_4o_mini_placebo_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_placebo_critique_correct": 1.0,
+          "predict_gpt_4o_mini_checksum_critique": "{\"final_answer\": 280.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_checksum_critique_correct": 1.0
+        },
+        {
+          "input": "problem_id=synth_0001",
+          "output": "171",
+          "metadata_checksum_detectable": false,
+          "predict_claude_haiku_4_5_baseline": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_baseline_correct": 1.0,
+          "predict_claude_haiku_4_5_freeform_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_freeform_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_placebo_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_placebo_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_checksum_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_checksum_critique_correct": 1.0,
+          "predict_gpt_4o_mini_baseline": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_baseline_correct": 1.0,
+          "predict_gpt_4o_mini_freeform_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_freeform_critique_correct": 1.0,
+          "predict_gpt_4o_mini_placebo_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_placebo_critique_correct": 1.0,
+          "predict_gpt_4o_mini_checksum_critique": "{\"final_answer\": 171.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_checksum_critique_correct": 1.0
+        },
+        {
+          "input": "problem_id=synth_0002",
+          "output": "54",
+          "metadata_checksum_detectable": false,
+          "predict_claude_haiku_4_5_freeform_critique": "{\"final_answer\": 54.5, \"is_correct\": false, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_freeform_critique_correct": 0.0,
+          "predict_claude_haiku_4_5_baseline": "{\"final_answer\": 54.5, \"is_correct\": false, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_baseline_correct": 0.0,
+          "predict_claude_haiku_4_5_placebo_critique": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_placebo_critique_correct": 1.0,
+          "predict_claude_haiku_4_5_checksum_critique": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_claude_haiku_4_5_checksum_critique_correct": 1.0,
+          "predict_gpt_4o_mini_baseline": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_baseline_correct": 1.0,
+          "predict_gpt_4o_mini_freeform_critique": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_freeform_critique_correct": 1.0,
+          "predict_gpt_4o_mini_placebo_critique": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_placebo_critique_correct": 1.0,
+          "predict_gpt_4o_mini_checksum_critique": "{\"final_answer\": 54.0, \"is_correct\": true, \"flagged_error\": false}",
+          "eval_gpt_4o_mini_checksum_critique_correct": 1.0
+        }
+      ]
+    }
+  ]
+}
