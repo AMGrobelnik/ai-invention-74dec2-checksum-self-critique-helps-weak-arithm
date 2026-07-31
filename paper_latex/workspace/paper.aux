@@ -1,0 +1,57 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Madaan2023,Huang2023,Kamoi2024,Stechly2024}
+\citation{Kamoi2024}
+\citation{Stechly2024}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{Bertolazzi2025}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end pipeline: a model solves a multi-step arithmetic word problem, then one of four self-check conditions is applied before a final answer is produced. The checksum condition (highlighted) replaces vague self-critique with an explicit, mechanically-computed casting-out-nines digit-root check per arithmetic sub-step, ending each check with CHECKSUM\_OK or CHECKSUM\_MISMATCH.}}{3}{figure.1}\protected@file@percent }
+\newlabel{fig:fig1}{{1}{3}{End-to-end pipeline: a model solves a multi-step arithmetic word problem, then one of four self-check conditions is applied before a final answer is produced. The checksum condition (highlighted) replaces vague self-critique with an explicit, mechanically-computed casting-out-nines digit-root check per arithmetic sub-step, ending each check with CHECKSUM\_OK or CHECKSUM\_MISMATCH}{figure.1}{}}
+\citation{Madaan2023}
+\citation{Huang2023,Kamoi2024,Stechly2024}
+\citation{Stechly2024}
+\citation{Kamoi2024}
+\citation{Ma2025}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Summary of Contributions}{4}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Related Work}{4}{section.2}\protected@file@percent }
+\citation{Cobbe2021}
+\citation{Dhuliawala2023}
+\citation{Bertolazzi2025}
+\citation{Wei2022}
+\citation{Huang2023}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminaries}{6}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methods}{6}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Benchmark Construction}{6}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Experimental Conditions}{7}{subsection.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Final-answer accuracy by condition and model. Checksum critique produces a large gain for claude-haiku-4.5, a statistically null effect for gpt-4o-mini, and a catastrophic collapse for llama-3.1-8b-instruct, revealing a non-monotonic rather than smoothly diminishing relationship between baseline capability and checksum-critique benefit.}}{8}{figure.2}\protected@file@percent }
+\newlabel{fig:fig2}{{2}{8}{Final-answer accuracy by condition and model. Checksum critique produces a large gain for claude-haiku-4.5, a statistically null effect for gpt-4o-mini, and a catastrophic collapse for llama-3.1-8b-instruct, revealing a non-monotonic rather than smoothly diminishing relationship between baseline capability and checksum-critique benefit}{figure.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results}{8}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Overall Accuracy Is Capability-Stratified, Not Monotonically Diminishing}{8}{subsection.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Mean response length by condition and model (left axis, bars) overlaid with the Pearson correlation between per-example response-length gain and accuracy gain (right axis, diamonds). llama-3.1-8b-instruct's checksum-critique responses are roughly 8x longer than its baseline, and unlike the other two models, longer checksum responses are associated with worse accuracy for this model.}}{9}{figure.3}\protected@file@percent }
+\newlabel{fig:fig3}{{3}{9}{Mean response length by condition and model (left axis, bars) overlaid with the Pearson correlation between per-example response-length gain and accuracy gain (right axis, diamonds). llama-3.1-8b-instruct's checksum-critique responses are roughly 8x longer than its baseline, and unlike the other two models, longer checksum responses are associated with worse accuracy for this model}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Why the Weak Model Collapses: A Bookkeeping-Overload Failure Mode}{9}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Detection Precision, Recall, and Correction Accuracy: A Properly Powered Re-Audit}{10}{subsection.5.3}\protected@file@percent }
+\citation{Cohen1960}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Checksum Self-Computation Reliability: Deterministic Checker Replaces Same-Model Judge}{11}{subsection.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Agreement between the new deterministic, zero-LLM-call mod-9 checker and a freshly re-run LLM judge on the same 70 paired checksum-critique traces. Raw agreement is 77.1\%, but Cohen's kappa of $-0.12$ indicates worse-than-chance agreement once each method's own error-flagging base rate is accounted for, motivating the deterministic checker as the new primary reliability estimate (9.6\% error rate, 30/312 parseable traces) over the prior same-model-judge figure (15.4\%, 80 traces).}}{11}{figure.4}\protected@file@percent }
+\newlabel{fig:fig4}{{4}{11}{Agreement between the new deterministic, zero-LLM-call mod-9 checker and a freshly re-run LLM judge on the same 70 paired checksum-critique traces. Raw agreement is 77.1\%, but Cohen's kappa of $-0.12$ indicates worse-than-chance agreement once each method's own error-flagging base rate is accounted for, motivating the deterministic checker as the new primary reliability estimate (9.6\% error rate, 30/312 parseable traces) over the prior same-model-judge figure (15.4\%, 80 traces)}{figure.4}{}}
+\citation{Madaan2023,Huang2023,Kamoi2024,Stechly2024}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Ruling Out Length as the Sole Driver for the Model That Benefits}{12}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{12}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{14}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Verbatim Critique Condition Prompts}{14}{appendix.A}\protected@file@percent }
+\bibstyle{plainnat}
+\bibdata{references}
+\bibcite{Bertolazzi2025}{{1}{2025}{{Bertolazzi et~al.}}{{Bertolazzi, Mondorf, Plank, and Bernardi}}}
+\bibcite{Cobbe2021}{{2}{2021}{{Cobbe et~al.}}{{Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser, Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman}}}
+\bibcite{Cohen1960}{{3}{1960}{{Cohen}}{{}}}
+\bibcite{Dhuliawala2023}{{4}{2023}{{Dhuliawala et~al.}}{{Dhuliawala, Komeili, Xu, Raileanu, Li, Celikyilmaz, and Weston}}}
+\bibcite{Huang2023}{{5}{2023}{{Huang et~al.}}{{Huang, Chen, Mishra, Zheng, Yu, Song, and Zhou}}}
+\bibcite{Kamoi2024}{{6}{2024}{{Kamoi et~al.}}{{Kamoi, Zhang, Zhang, Han, and Zhang}}}
+\bibcite{Ma2025}{{7}{2025}{{Ma et~al.}}{{Ma, Wang, Liu, Liu, Chen, Zhang, Zhou, Du, and Li}}}
+\bibcite{Madaan2023}{{8}{2023}{{Madaan et~al.}}{{Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe, Alon, Dziri, Prabhumoye, Yang, Welleck, Majumder, Gupta, Yazdanbakhsh, and Clark}}}
+\bibcite{Stechly2024}{{9}{2024}{{Stechly et~al.}}{{Stechly, Valmeekam, and Kambhampati}}}
+\bibcite{Wei2022}{{10}{2022}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and Zhou}}}
+\gdef \@abspage@last{16}

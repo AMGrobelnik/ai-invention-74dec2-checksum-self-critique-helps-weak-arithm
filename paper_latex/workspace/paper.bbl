@@ -1,0 +1,98 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bertolazzi et~al.(2025)Bertolazzi, Mondorf, Plank, and
+  Bernardi]{Bertolazzi2025}
+Leonardo Bertolazzi, Philipp Mondorf, Barbara Plank, and Raffaella Bernardi.
+\newblock The validation gap: A mechanistic analysis of how language models
+  compute arithmetic but fail to validate it.
+\newblock In \emph{Conference on Empirical Methods in Natural Language
+  Processing}, volume abs/2502.11771, 2025.
+\newblock \doi{10.48550/arXiv.2502.11771}.
+
+\bibitem[Cobbe et~al.(2021)Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser,
+  Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman]{Cobbe2021}
+K.~Cobbe, Vineet Kosaraju, Mo~Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser,
+  Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, Christopher
+  Hesse, and John Schulman.
+\newblock Training verifiers to solve math word problems.
+\newblock \emph{ArXiv}, abs/2110.14168, 2021.
+
+\bibitem[Cohen(1960)]{Cohen1960}
+Jacob Cohen.
+\newblock A coefficient of agreement for nominal scales.
+\newblock \emph{Educational and Psychological Measurement}, 20\penalty0
+  (1):\penalty0 37--46, 1960.
+\newblock \doi{10.1177/001316446002000104}.
+
+\bibitem[Dhuliawala et~al.(2023)Dhuliawala, Komeili, Xu, Raileanu, Li,
+  Celikyilmaz, and Weston]{Dhuliawala2023}
+S.~Dhuliawala, M.~Komeili, Jing Xu, R.~Raileanu, Xian Li, Asli Celikyilmaz, and
+  Jason Weston.
+\newblock Chain-of-verification reduces hallucination in large language models.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, pages 3563--3578, 2023.
+\newblock \doi{10.48550/arXiv.2309.11495}.
+
+\bibitem[Huang et~al.(2023)Huang, Chen, Mishra, Zheng, Yu, Song, and
+  Zhou]{Huang2023}
+Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu~Steven Zheng, Adams~Wei Yu,
+  Xinying Song, and Denny Zhou.
+\newblock Large language models cannot self-correct reasoning yet.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2310.01798, 2023.
+\newblock \doi{10.48550/arXiv.2310.01798}.
+
+\bibitem[Kamoi et~al.(2024)Kamoi, Zhang, Zhang, Han, and Zhang]{Kamoi2024}
+Ryo Kamoi, Yusen Zhang, Nan Zhang, Jiawei Han, and Rui Zhang.
+\newblock When can llms actually correct their own mistakes? a critical survey
+  of self-correction of llms.
+\newblock In \emph{Transactions of the Association for Computational
+  Linguistics}, volume~12, pages 1417--1440, 2024.
+\newblock \doi{10.1162/tacl_a_00713}.
+
+\bibitem[Ma et~al.(2025)Ma, Wang, Liu, Liu, Chen, Zhang, Zhou, Du, and
+  Li]{Ma2025}
+Ruotian Ma, Peisong Wang, Cheng Liu, Xingyan Liu, Jiaqi Chen, Bang Zhang, Xin
+  Zhou, Nan Du, and Jia Li.
+\newblock S2r: Teaching llms to self-verify and self-correct via reinforcement
+  learning.
+\newblock In \emph{Annual Meeting of the Association for Computational
+  Linguistics}, volume abs/2502.12853, 2025.
+\newblock \doi{10.48550/arXiv.2502.12853}.
+
+\bibitem[Madaan et~al.(2023)Madaan, Tandon, Gupta, Hallinan, Gao, Wiegreffe,
+  Alon, Dziri, Prabhumoye, Yang, Welleck, Majumder, Gupta, Yazdanbakhsh, and
+  Clark]{Madaan2023}
+Aman Madaan, Niket Tandon, Prakhar Gupta, Skyler Hallinan, Luyu Gao, Sarah
+  Wiegreffe, Uri Alon, Nouha Dziri, Shrimai Prabhumoye, Yiming Yang,
+  S.~Welleck, Bodhisattwa~Prasad Majumder, Shashank Gupta, A.~Yazdanbakhsh, and
+  Peter Clark.
+\newblock Self-refine: Iterative refinement with self-feedback.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2303.17651, 2023.
+\newblock \doi{10.48550/arXiv.2303.17651}.
+
+\bibitem[Stechly et~al.(2024)Stechly, Valmeekam, and Kambhampati]{Stechly2024}
+Kaya Stechly, Karthik Valmeekam, and Subbarao Kambhampati.
+\newblock On the self-verification limitations of large language models on
+  reasoning and planning tasks.
+\newblock In \emph{International Conference on Learning Representations},
+  volume abs/2402.08115, 2024.
+\newblock \doi{10.48550/arXiv.2402.08115}.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Chi, Xia, Le, and
+  Zhou]{Wei2022}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed~H. Chi, F.~Xia, Quoc
+  Le, and Denny Zhou.
+\newblock Chain of thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Neural Information Processing Systems}, volume
+  abs/2201.11903, 2022.
+\newblock \doi{10.52202/068431-1800}.
+
+\end{thebibliography}
